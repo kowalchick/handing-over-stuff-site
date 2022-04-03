@@ -1,35 +1,19 @@
+import "./App.css";
 import * as React from 'react';
+import {
+    BrowserRouter as Router, Routes, Route
+
+} from 'react-router-dom';
 
 
 function App() {
 
     return (
-        <div className="App">
-            <Router>
-                <div>
-                    <Switch>
-                        <Route exact path="/">
-                            <Home />
-                        </Route>
-                        <Route path="/start">
-                            <Start />
-                        </Route>
-                        <Route path="/what">
-                            <What />
-                        </Route>
-                        <Route path="/about">
-                            <About />
-                        </Route>
-                        <Route path="/fundation">
-                            <Fundation />
-                        </Route>
-                        <Route path="/contact">
-                            <Contact />
-                        </Route>
-                    </Switch>
-                </div>
-            </Router>
-        </div>
-    );
+        <Router>
+            <Routes>
+                <Route path="/" />
+
+            </Routes>
+        </Router>);
 }
 export default App;
