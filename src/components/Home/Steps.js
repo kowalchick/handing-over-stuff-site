@@ -11,10 +11,10 @@ const Steps = () => {
             <div className="container">
                 <div className="steps-wrapper">
                     <div className="steps-title">
-                        <h2>Wystarczą 4 proste kroki</h2>
+                        <h2 className="fancy">Wystarczą 4 proste kroki</h2>
                     </div>
                     <div className="steps-steps">
-                        <div className="steps-2">
+                        <div className="steps-two">
                             <div className="step">
                                 <div className="step-icon">
                                     <img src={icon1} alt="tshirt"/>
@@ -42,7 +42,7 @@ const Steps = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="steps-2">
+                        <div className="steps-two">
                             <div className="step">
                                 <div className="step-icon">
                                     <img src={icon3} alt="hand glass"/>
@@ -72,7 +72,7 @@ const Steps = () => {
                             </div>
                         </div>
                     </div>
-                    <Link to="/oddaj-rzeczy/">Oddaj<br/>rzeczy</Link>
+                    <Link to="/oddaj-rzeczy/" className="btn steps-btn">Oddaj<br/>rzeczy</Link>
                 </div>
             </div>
         </section>
