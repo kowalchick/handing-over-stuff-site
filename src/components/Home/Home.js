@@ -4,7 +4,7 @@ import NavMenu from "../NavMenu";
 import ThreeColumns from './ThreeColumns';
 import Steps from "./Steps";
 import About from "./About";
-import FooterForm from "./FooterForm";
+import FooterForm from "../FooterForm";
 
 const Home = () => {
     return (
