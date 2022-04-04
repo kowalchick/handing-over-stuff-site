@@ -6,7 +6,7 @@ import Steps from "./Steps";
 import About from "./About";
 import FooterForm from "./FooterForm";
 
-function Home() {
+const Home = () => {
     return (
         <>
             <NavMenu />
