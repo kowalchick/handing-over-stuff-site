@@ -40,14 +40,42 @@
       z-index: -1;
     }
   }
-  &-two {
+  &-box {
     display: flex;
-    width: 50%;
     justify-content: space-around;
-    min-width: 350px;
   }
   &-btn {
     margin-bottom: 50px;
     padding: 10px 30px;
+  }
+}
+.step {
+  text-align: center;
+  padding: 15px;
+  &-icon {
+    display: block;
+    margin: 10px;
+  }
+  &-title {
+    position: relative;
+    font-size: 18px;
+    line-height: 24px;
+    min-width: 260px;
+    &:after {
+      content: "";
+      width: 100px;
+      position: absolute;
+      color: #222222;
+      border-bottom: $darkgrey 1px solid;
+      left: 50%;
+      margin-top: 15px;
+      transform: translateX(-50%);
+      display: block;
+    }
+  }
+  &-subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 30px;
   }
 }
