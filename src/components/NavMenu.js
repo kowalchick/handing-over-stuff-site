@@ -6,16 +6,15 @@ import ScrollLink from "./ScrollLink";
 
 const NavMenu = () => {
     return (
-        <div>
+        <div className='nav-menu'>
             <div className="container">
                 <div className="nav-top">
                     <div className="nav-user">
                         <>
-                            <h3>Cześć</h3>
                             <NavLink to='/oddaj-rzeczy/'>Oddaj rzeczy</NavLink>
-                                    <Scroll to={"survey-form"} spy={true} smooth={true} duration={500} >
-                                        {"Formularz"}
-                                    </Scroll>
+                            <Scroll to={"survey-form"} spy={true} smooth={true} duration={500} >
+                                {"Formularz"}
+                            </Scroll>
                             <NavLink to="/">Home</NavLink>
                             <button>Logout</button>
                         </>

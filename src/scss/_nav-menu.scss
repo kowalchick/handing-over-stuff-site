@@ -1,0 +1,14 @@
+.nav-menu {
+  width: 100%;
+  position: absolute;
+}
+.nav-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  padding-top: 50px;
+}
+.nav-user {
+  display: flex;
+}
