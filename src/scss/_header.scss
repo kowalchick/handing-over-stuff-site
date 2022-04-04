@@ -1,0 +1,48 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: white;
+
+  &-btn {
+    padding: 10px 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
+  &-img {
+    background: url("../assets/Home-Hero-Image.jpeg") no-repeat right bottom;
+    width: 40%;
+    height: 100%;
+  }
+  &-content {
+    width: 60%;
+    height: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 100px;
+    padding-top: 100px;
+
+  }
+  &-title {
+    color: $darkgrey;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: -0.76px;
+    position: relative;
+    margin-bottom: 100px;
+    //z-index: 1;
+    text-align: center;
+    line-height: 55px;
+    &-box {
+      display: flex;
+      justify-content: space-around;
+      //z-index: 1;
+    }
+  }
+}
