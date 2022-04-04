@@ -1,9 +1,9 @@
 import React from 'react';
 
-function WhoHelp() {
+const WhoHelp = () => {
     return (
         <div>Komu pomagamy?</div>
     );
-}
+};
 
 export default WhoHelp;

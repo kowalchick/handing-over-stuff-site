@@ -4,7 +4,7 @@ import {Link as Scroll} from "react-scroll";
 import ScrollLink from "./ScrollLink";
 
 
-function NavMenu() {
+const NavMenu = () => {
     return (
         <div>
             <div className="container">
