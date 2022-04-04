@@ -1,7 +1,7 @@
 import React from 'react';
 import Signature from '../../assets/Signature.svg';
 
-function About() {
+const About = () => {
     return (
         <section className="about">
             <div className="container">
