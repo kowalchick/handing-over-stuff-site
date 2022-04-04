@@ -1,0 +1,44 @@
+.three-columns {
+  background: url("../assets/3 Columns Background.png") repeat;
+}
+.columns-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.columns {
+  &-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    width: 20%;
+  }
+  &-count {
+    h2 {
+      color: $brown;
+      line-height: 122px;
+      font-size: 90px;
+      font-weight: 300;
+      margin-top: 50px;
+    }
+  }
+  &-title h3 {
+    font-size: 18px;
+    line-height: 30px;
+    color: $darkgrey;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+  }
+  &-text p {
+    font-family: $font-alt;
+    text-align: center;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 300;
+    color: $darkgrey;
+    letter-spacing: -0.32px;
+    margin: 30px 0;
+    padding-bottom: 50px;
+  }
+}
