@@ -1,9 +1,9 @@
 import React from 'react';
 
-function ThreeColumns() {
+function Steps() {
     return (
         <div></div>
     );
 }
 
-export default ThreeColumns;
+export default Steps;
