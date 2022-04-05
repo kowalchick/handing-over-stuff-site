@@ -16,15 +16,15 @@
   &-count {
     h2 {
       color: $brown;
-      line-height: 122px;
-      font-size: 90px;
+      line-height: 7.625rem;
+      font-size: 5.625rem;
       font-weight: 300;
       margin-top: 50px;
     }
   }
   &-title h3 {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
     color: $darkgrey;
     text-transform: uppercase;
     text-align: center;
@@ -33,8 +33,8 @@
   &-text p {
     font-family: $font-alt;
     text-align: center;
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 1rem;
+    line-height: 2rem;
     font-weight: 300;
     color: $darkgrey;
     letter-spacing: -0.32px;

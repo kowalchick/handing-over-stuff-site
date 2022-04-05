@@ -69,7 +69,7 @@ const Steps = () => {
                             </div>
                     </div>
                     </div>
-                    <Link to="/oddaj-rzeczy/" className="btn steps-btn">Hand over<br/>stuff</Link>
+                    <Link to="/hand-over/" className="btn steps-btn">Hand over<br/>stuff</Link>
                 </div>
             </div>
         </section>
