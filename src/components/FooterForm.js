@@ -17,7 +17,7 @@ const FooterForm = () => {
                         <div className="contact-title">
                             <h2 className="fancy">Contact us</h2>
                         </div>
-                        <form className="contact-form" onSubmit={handleSubmit}>
+                        <form autoComplete="off" className="contact-form" onSubmit={handleSubmit}>
                             <div className="input-wrapper">
                                 <label className="form-label" htmlFor="name">Type your name</label>
                                 <input
