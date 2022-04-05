@@ -5,5 +5,4 @@ const WhoHelp = () => {
         <div>Who do we help?</div>
     );
 };
-
 export default WhoHelp;

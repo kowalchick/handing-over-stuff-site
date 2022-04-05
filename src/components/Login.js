@@ -1,9 +1,14 @@
 import React from 'react';
+import NavMenu from './NavMenu';
+import LogForm from './Forms/LogForm';
 
-function Login() {
+const Login = () => {
     return (
-        <div>Sign in</div>
+        <>
+            <NavMenu />
+                <LogForm />}
+        </>
     );
-}
-
+};
 export default Login;
+
