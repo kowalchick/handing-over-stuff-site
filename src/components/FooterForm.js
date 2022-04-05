@@ -12,12 +12,12 @@ const FooterForm = () => {
     return (
         <footer className="footer" >
             <div className="container">
-                <div className="contact-wrapper">
-                    <div className="section-contact">
-                        <div className="section-contact-title">
-                            <h2>Contact us</h2>
+                <div className="contact-box">
+                    <div className="contact-section">
+                        <div className="contact-title">
+                            <h2 className="fancy">Contact us</h2>
                         </div>
-                        <form className="section-contact-form" onSubmit={handleSubmit}>
+                        <form className="contact-form" onSubmit={handleSubmit}>
                             <div className="input-wrapper">
                                 <label className="form-label" htmlFor="name">Type your name</label>
                                 <input
@@ -27,6 +27,7 @@ const FooterForm = () => {
                                     placeholder="John"
                                     value={name}
                                     onChange={e => setName(e.target.value)}
+                                    className="form-input"
                                 />
                             </div>
                             <div className="input-wrapper">
@@ -38,6 +39,7 @@ const FooterForm = () => {
                                     placeholder="johnkowalski@gmail.com"
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
+                                    className="form-input"
                                 />
                             </div>
                             <label className="form-label" htmlFor="message">Leave a message</label>
@@ -45,12 +47,14 @@ const FooterForm = () => {
                                 rows="4"
                                 id="message"
                                 name="message"
-                                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                                 value={message}
                                 onChange={e => setMessage(e.target.value)}
+                                className="form-input"
                             />
                             <div className="submit-wrapper">
-                                <button type="submit">Send</button>
+                                <button type="submit" className="btn form-submit">Send</button>
                             </div>
                         </form>
                     </div>

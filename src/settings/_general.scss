@@ -26,18 +26,6 @@ a {
   max-width: 1600px;
   margin: 0 auto;
 }
-
-@mixin btn {
-  font-family: $font-base;
-  color: $darkgrey;
-  font-size: 36px;
-  line-height: 45px;
-  font-weight: 100;
-  text-transform: uppercase;
-  border: .75px solid $darkgrey;
-  text-decoration: none;
-  text-align: center;
-}
 .btn {
   font-family: $font-base;
   font-size: 36px;
