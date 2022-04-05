@@ -7,4 +7,56 @@
   align-items: center;
   color: $darkgrey;
   position: relative;
+  &-title, h1 {
+    font-size: 2.5rem;
+    position: relative;
+    font-weight: normal;
+  }
 }
+
+
+.logform-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px 0;
+
+  &-inputs {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 0 50px 50px;
+
+    .form-input {
+      border-bottom: solid 1px $darkgrey;
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  }
+.logform {
+  &-link {
+    text-decoration: none;
+    font-size: 1.125rem;
+    color: $darkgrey;
+    font-weight: 300;
+  }
+  &-btns .btn{
+    background: none;
+    font-size: 1.125rem;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+
+  }
+}
+
+
+
+
+

@@ -14,9 +14,9 @@ const LogForm = () => {
             <div className="logform-title ">
                 <h1 className="fancy">Log in</h1>
             </div>
-            <form className="logform-form" onSubmit={handleSubmit}>
+            <form className="logform-form" autoComplete="off" onSubmit={handleSubmit}>
                 <div className="logform-form-inputs">
-                    <label className="form-label" htmlFor="name">Email</label>
+                    <label className="form-label" htmlFor="name">E-mail:</label>
                     <input
                         className="form-input"
                         id="email"
@@ -25,7 +25,7 @@ const LogForm = () => {
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
-                    <label className="form-label" htmlFor="password">Password</label>
+                    <label className="form-label" htmlFor="password">Password:</label>
                     <input
                         className="form-input"
                         id="password"
@@ -38,7 +38,7 @@ const LogForm = () => {
                 <div className="logform-btns">
                         <>
                             <Link className="logform-link" to="/rejestracja/">Sign in</Link>
-                            <button className="logform-btn">Sign out</button>
+                            <button className="logform-btn btn">Sign out</button>
                         </>
                 </div>
             </form>

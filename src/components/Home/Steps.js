@@ -63,7 +63,7 @@ const Steps = () => {
                                 </div>
                                 <div className="step-subtitle">
                                     <p>
-                                        A courier will come at a convenient time
+                                        a courier will come at a convenient time
                                     </p>
                                 </div>
                             </div>
