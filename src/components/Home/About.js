@@ -8,7 +8,7 @@ const About = () => {
                 <div className="about-wrapper">
                     <div className="about-content">
                         <div className="about-title">
-                            <h2 className="fancy">O nas</h2>
+                            <h2 className="fancy">About us</h2>
                         </div>
                         <p className="about-text">
                             Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya

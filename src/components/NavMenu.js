@@ -11,17 +11,17 @@ const NavMenu = () => {
                 <div className="nav-top">
                     <div className="nav-user">
                         <>
-                            <NavLink to='/oddaj-rzeczy/'>Oddaj rzeczy</NavLink>
+                            <NavLink to='/hand-over/'>Hand over stuff</NavLink>
                             <Scroll to={"survey-form"} spy={true} smooth={true} duration={500} >
-                                {"Formularz"}
+                                {"Form"}
                             </Scroll>
                             <NavLink to="/">Home</NavLink>
                             <button>Logout</button>
                         </>
                         <>
                             <NavLink to="/">Home</NavLink>
-                            <NavLink to='/logowanie/'>Zaloguj</NavLink>
-                            <NavLink to='/rejestracja/'>Załóż konto</NavLink>
+                            <NavLink to='/login/'>Sign in</NavLink>
+                            <NavLink to='/register/'>Sign up</NavLink>
                         </>
                     </div>
 
@@ -30,11 +30,11 @@ const NavMenu = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/">Start</NavLink>
                             </li>
-                            <ScrollLink to='three-columns' text={"O co chodzi?"}/>
-                            <ScrollLink to='about' text={"O nas"}/>
-                            <ScrollLink to='foundations' text={"Fundacja i organizacje"}/>
-                            <ScrollLink to='survey-form' text={"Wypełnij formularz"}/>
-                            <ScrollLink to='footer' text={"Kontakt"}/>
+                            <ScrollLink to='three-columns' text={"What is all about?"}/>
+                            <ScrollLink to='about' text={"About us"}/>
+                            <ScrollLink to='foundations' text={"Foundations and organizations"}/>
+                            <ScrollLink to='survey-form' text={"Fill the form"}/>
+                            <ScrollLink to='footer' text={"Contact us"}/>
                         </ul>
                     </nav>
                 </div>

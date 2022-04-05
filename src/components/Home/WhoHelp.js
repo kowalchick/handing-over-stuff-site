@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhoHelp = () => {
     return (
-        <div>Komu pomagamy?</div>
+        <div>Who do we help?</div>
     );
 };
 

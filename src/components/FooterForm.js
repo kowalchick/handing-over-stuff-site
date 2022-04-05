@@ -15,32 +15,32 @@ const FooterForm = () => {
                 <div className="contact-wrapper">
                     <div className="section-contact">
                         <div className="section-contact-title">
-                            <h2>Skontaktuj się z nami</h2>
+                            <h2>Contact us</h2>
                         </div>
                         <form className="section-contact-form" onSubmit={handleSubmit}>
                             <div className="input-wrapper">
-                                <label className="form-label" htmlFor="name">Wpisz swoje imię</label>
+                                <label className="form-label" htmlFor="name">Type your name</label>
                                 <input
                                     id="name"
                                     name="name"
                                     type="text"
-                                    placeholder="Jan"
+                                    placeholder="John"
                                     value={name}
                                     onChange={e => setName(e.target.value)}
                                 />
                             </div>
                             <div className="input-wrapper">
-                                <label className="form-label" htmlFor="email">Wpisz swój email</label>
+                                <label className="form-label" htmlFor="email">Type your e-mail</label>
                                 <input
                                     id="email"
                                     name="email"
                                     type="email"
-                                    placeholder="jankowalski@gmail.pl"
+                                    placeholder="johnkowalski@gmail.com"
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
                                 />
                             </div>
-                            <label className="form-label" htmlFor="message">Wpisz swoją wiadomość</label>
+                            <label className="form-label" htmlFor="message">Leave a message</label>
                             <textarea
                                 rows="4"
                                 id="message"
@@ -50,7 +50,7 @@ const FooterForm = () => {
                                 onChange={e => setMessage(e.target.value)}
                             />
                             <div className="submit-wrapper">
-                                <button type="submit">Wyślij</button>
+                                <button type="submit">Send</button>
                             </div>
                         </form>
                     </div>

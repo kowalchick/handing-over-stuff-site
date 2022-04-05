@@ -16,10 +16,10 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/oddaj-rzeczy" element={<Forms />}/>
-                <Route path="/logowanie" element={<Login />}/>
-                <Route path="/rejestracja" element={<Register />}/>
-                <Route path="/wylogowano" element={<Logout />}/>
+                <Route path="/hand-over" element={<Forms />}/>
+                <Route path="/login" element={<Login />}/>
+                <Route path="/register" element={<Register />}/>
+                <Route path="/logout" element={<Logout />}/>
                 <Route path="*" element={<ErrPage />}/>
             </Routes>
         </Router>);

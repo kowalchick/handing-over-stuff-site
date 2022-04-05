@@ -10,7 +10,7 @@ const ThreeColumns = () => {
                             <h2>10</h2>
                         </div>
                         <div className="columns-title">
-                            <h3>Oddanych worków</h3>
+                            <h3>Handing over bags</h3>
                         </div>
                         <div className="columns-text">
                             <p>
@@ -26,7 +26,7 @@ const ThreeColumns = () => {
                             <h2>5</h2>
                         </div>
                         <div className="columns-title">
-                            <h3>Wspartych organizacji</h3>
+                            <h3>Supported organisations</h3>
                         </div>
                         <div className="columns-text">
                             <p>
@@ -42,7 +42,7 @@ const ThreeColumns = () => {
                             <h2>7</h2>
                         </div>
                         <div className="columns-title">
-                            <h3>Zorganizowanych zbiórek</h3>
+                            <h3>Raised fundraisers</h3>
                         </div>
                         <div className="columns-text">
                             <p>

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Forms() {
     return (
-        <div>Oddaj rzeczy</div>
+        <div>Hand over your stuff</div>
     );
 }
 

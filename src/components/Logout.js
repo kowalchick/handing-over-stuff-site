@@ -2,7 +2,7 @@ import React from 'react';
 
 function Logout(props) {
     return (
-        <div>Wylogowanie nastąpiło pomyślnie!</div>
+        <div>Your session was closed successfully!</div>
     );
 }
 

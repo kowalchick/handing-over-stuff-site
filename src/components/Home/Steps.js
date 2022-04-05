@@ -11,7 +11,7 @@ const Steps = () => {
             <div className="container">
                 <div className="steps-wrapper">
                     <div className="steps-title">
-                        <h2 className="fancy">Wystarczą 4 proste kroki</h2>
+                        <h2 className="fancy">Just 4 easy steps</h2>
                     </div>
                     <div className="steps-steps">
                         <div className="steps-box">
@@ -20,11 +20,11 @@ const Steps = () => {
                                     <img src={icon1} alt="tshirt"/>
                                 </div>
                                 <div className="step-title">
-                                    <h3>Wybierz rzeczy</h3>
+                                    <h3>Choose stuff</h3>
                                 </div>
                                 <div className="step-subtitle">
                                     <p>
-                                        ubrania, zabawki, sprzęt i inne
+                                        clothes, toys, gear and more
                                     </p>
                                 </div>
                             </div>
@@ -33,11 +33,11 @@ const Steps = () => {
                                     <img src={icon2} alt="shopping tag"/>
                                 </div>
                                 <div className="step-title">
-                                    <h3>Spakuj je</h3>
+                                    <h3>Pack up</h3>
                                 </div>
                                 <div className="step-subtitle">
                                     <p>
-                                        skorzystaj z worków na śmieci
+                                        use a garbage bag
                                     </p>
                                 </div>
                             </div>
@@ -46,11 +46,11 @@ const Steps = () => {
                                     <img src={icon3} alt="hand glass"/>
                                 </div>
                                 <div className="step-title">
-                                    <h3>Zdecyduj komu chcesz pomóc</h3>
+                                    <h3>Decide who you want to help</h3>
                                 </div>
                                 <div className="step-subtitle">
                                     <p>
-                                        wybierz zaufane miejsce
+                                        choose a safe place
                                     </p>
                                 </div>
                             </div>
@@ -59,17 +59,17 @@ const Steps = () => {
                                     <img src={icon4} alt="cycle"/>
                                 </div>
                                 <div className="step-title">
-                                    <h3>Zamów kuriera</h3>
+                                    <h3>Book a courier</h3>
                                 </div>
                                 <div className="step-subtitle">
                                     <p>
-                                        kurier przyjedzie w dogodnym terminie
+                                        A courier will come at a convenient time
                                     </p>
                                 </div>
                             </div>
                     </div>
                     </div>
-                    <Link to="/oddaj-rzeczy/" className="btn steps-btn">Oddaj<br/>rzeczy</Link>
+                    <Link to="/oddaj-rzeczy/" className="btn steps-btn">Hand over<br/>stuff</Link>
                 </div>
             </div>
         </section>
