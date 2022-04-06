@@ -1,14 +1,27 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {getSigninAction} from "../../redux/actions";
 
 
 const LogForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const userContext = useSelector(state => state.userContext);
+    const dispatch = useDispatch();
+
+    const signin = () => {
+      dispatch(getSigninAction(email, password));
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
     }
+
+    useEffect(() => {
+        console.log(userContext);
+    }, [userContext]);
     return (
         <section className="logform-box">
             <div className="logform-title ">
@@ -38,7 +51,7 @@ const LogForm = () => {
                 <div className="logform-btns">
                         <>
                             <Link className="logform-link" to="/register/">Sign in</Link>
-                            <button className="logform-btn">Sign out</button>
+                            <button className="logform-btn" onClick={signin}>Sign out</button>
                         </>
                 </div>
             </form>
