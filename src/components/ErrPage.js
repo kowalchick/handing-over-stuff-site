@@ -1,8 +1,18 @@
 import React from 'react';
 
-function ErrPage(props) {
+const ErrPage =() =>{
     return (
-        <div>404 no page found</div>
+        <h1
+            className="fancy"
+            style ={{
+                fontSize: "3rem",
+                color: "$darkgray",
+                textAlign: "center",
+                position: "relative",
+                marginTop: "50%",
+            }}
+        >404 no page found
+        </h1>
     );
 }
 
