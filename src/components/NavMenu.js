@@ -5,6 +5,9 @@ import ScrollLink from "./ScrollLink";
 
 
 const NavMenu = () => {
+    const isHome = window.location.pathname === "/";
+    const isOffHome = window.location.pathname === "/login/" || window.location.pathname === "/register/";
+
     return (
         <div className='nav-menu'>
             <div className="container">
