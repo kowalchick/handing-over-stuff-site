@@ -43,16 +43,40 @@
     color: $darkgrey;
     font-weight: 300;
   }
-  &-btns .btn{
+  &-btns {
     background: none;
     font-size: 1.125rem;
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    line-height: 2rem;
     padding: 20px;
     margin: 20px;
+    font-weight: 100;
 
+  }
+  &-btn {
+    font-family: $font-base;
+    padding: 0 15px 0 15px;
+    font-weight: 100;
+    line-height: 2.8125rem;
+    border: .75px solid $darkgrey;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: $darkgrey;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    background: none;
+
+    &:hover, &:focus {
+      color: $yellow;
+      background-color: $brown;
+    }
+    &:active {
+      position: relative;
+      top: 2px;
+    }
   }
 }
 

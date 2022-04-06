@@ -37,8 +37,8 @@ const LogForm = () => {
                 </div>
                 <div className="logform-btns">
                         <>
-                            <Link className="logform-link" to="/rejestracja/">Sign in</Link>
-                            <button className="logform-btn btn">Sign out</button>
+                            <Link className="logform-link" to="/register/">Sign in</Link>
+                            <button className="logform-btn">Sign out</button>
                         </>
                 </div>
             </form>
