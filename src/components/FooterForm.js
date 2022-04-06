@@ -54,7 +54,7 @@ const FooterForm = () => {
                                 className="form-input"
                             />
                             <div className="submit-wrapper">
-                                <button type="submit" className="btn form-submit">Send</button>
+                                <button type="submit" className="form-submit btn">Send</button>
                             </div>
                         </form>
                     </div>

@@ -69,14 +69,15 @@
   border-top: solid 1px $darkgrey;
 
 }
-
-
-
 .form-submit {
   font-weight: normal;
   font-size: 1.125rem;
   line-height: 2rem;
   padding: 10px 40px;
   margin-top: 40px;
+  background: none;
+  &:hover, &:focus {
+    background-color: $brown;
+  }
 }
 }
