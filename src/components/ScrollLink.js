@@ -3,7 +3,7 @@ import {Link} from 'react-scroll';
 
 function ScrollLink({to,text}) {
     return (
-        <li>
+        <li className="nav-item">
             <Link to={to} spy={true} smooth={true} duration={500}>
                 {text}
             </Link>

@@ -1,15 +1,12 @@
-//[] - initial state
-import {ACTION_SIGNIN} from "./actions";
+import * as actions from "./actionTypes";
 
-let lastId = 0;
-
-const initialState = {
+export const initialState = {
     userContext: null,
 };
 
 export default function reducer(state = initialState, action) {
     switch(action.type) {
-        case ACTION_SIGNIN:
+        case actions.ACTION_SIGNIN:
             console.log('SIGNIN', action);
             return {
                 ...state,
@@ -17,6 +14,7 @@ export default function reducer(state = initialState, action) {
                     username: action.payload.username,
                     password: action.payload.password
                 }
+
             };
         default:
             return state;

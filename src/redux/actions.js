@@ -1,10 +1,17 @@
-export const ACTION_SIGNIN = 'SIGNIN';
+import * as actions from './actionTypes';
 
-export const getSigninAction = (username, password) => ({
+export const getSigninAction = (email, password) => ({
+    type: actions.ACTION_SIGNIN,
     payload: {
       password,
-      username
+      email
     },
-    type: ACTION_SIGNIN,
+
+});
+export const getSignOutAction = (email, password) => ({
+    type: actions.ACTION_SIGNOUT,
+    payload: {
+
+    },
 });
 
