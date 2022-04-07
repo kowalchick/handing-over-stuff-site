@@ -2,6 +2,7 @@
   width: 100%;
   position: absolute;
 }
+
 .nav-top {
   display: flex;
   flex-direction: column;
@@ -11,6 +12,10 @@
 }
 .nav-user {
   display: flex;
+
+  .decoration{
+    border: solid 0.75px $yellow;
+  }
 }
 .nav {
   &-list {
