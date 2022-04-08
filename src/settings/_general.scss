@@ -39,6 +39,7 @@ a {
   color: $darkgrey;
   transition: color .2s ease-in-out, background-color .2s ease-in-out;
 
+
   &:hover, &:focus {
     color: $yellow;
     background-color: $brown;

@@ -6,12 +6,12 @@
   background-color: white;
 
   &-btn {
-    padding: 10px 20px;
-    width: 50%;
+    min-width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    padding: 10px 30px 10px 30px;
+    margin: 20px;
   }
   &-img {
     background: url("../assets/Home-Hero-Image.jpeg") no-repeat right bottom;
