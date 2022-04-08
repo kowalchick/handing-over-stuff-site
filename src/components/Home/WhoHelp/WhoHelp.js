@@ -1,6 +1,12 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+// import OnePage from './OnePage';
 
 const WhoHelp = () => {
+    const [activeData, setActiveData] = useState(null);
+
+    useEffect(()=> {
+
+    },[])
     return (
         <section className="foundations" id="who-help">
             <div className="container">
@@ -10,7 +16,7 @@ const WhoHelp = () => {
                         <div className="tabs-btns">
                             <button className="tab-btn" />
                         </div>
-                        {/*<SingleTab />*/}
+                        {/*<OnePage data={activeData} />*/}
                     </div>
                 </div>
             </div>
