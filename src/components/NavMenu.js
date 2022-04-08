@@ -25,7 +25,7 @@ const NavMenu = () => {
                         <>
                             <NavLink to="/">Home</NavLink>
                             <NavLink to='/login/'>Sign in</NavLink>
-                            <NavLink to='/register/'>Sign up</NavLink>
+                            <NavLink to='/register/' className="decoration">Sign up</NavLink>
                         </>
                     </div>
 
