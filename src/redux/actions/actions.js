@@ -8,12 +8,7 @@ export const getSigninAction = (email, password) => ({
     },
 
 });
-export const getSignOutAction = (email, password) => ({
-    type: actions.ACTION_SIGNOUT,
-    payload: {
 
-    },
-});
 // import { SET_CURRENT_USER, REGISTER_SUCCESS, LOGOUT, GET_ERRORS } from "./actionTypes";
 //
 // export function setCurrentUser(user) {
