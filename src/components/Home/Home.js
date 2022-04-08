@@ -5,6 +5,7 @@ import ThreeColumns from './ThreeColumns';
 import Steps from "./Steps";
 import About from "./About";
 import FooterForm from "../FooterForm";
+import WhoHelp from "./WhoHelp/WhoHelp";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <ThreeColumns />
             <Steps />
             <About />
+            <WhoHelp />
             <FooterForm />
         </>
     );
