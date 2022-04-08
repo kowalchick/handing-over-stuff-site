@@ -1,8 +1,8 @@
 export default [
     {
-        "recipient": "Foundations",
-        "title": "In our database you will find a list of verified Foundations with which we cooperate. You can check what they do, who they help and what they need.",
-        "list": [
+        recipient: "Foundations",
+        title: "In our database you will find a list of verified Foundations with which we cooperate. You can check what they do, who they help and what they need.",
+        list: [
             {
                 "name": 'Foundation "Care of my health"',
                 "description": "Purpose and mission: Helping people in a difficult life situation.",
@@ -51,9 +51,9 @@ export default [
         ]
     },
     {
-        "recipient": "Non-governmental organizations",
-        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-        "list": [
+        recipient: "Non-governmental organizations",
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        list: [
             {
                 "name": 'Organization "Lorem Ipsum 1"',
                 "description": "1 Quis varius quam quisque id diam vel quam elementum pulvinar.",
@@ -87,9 +87,9 @@ export default [
         ]
     },
     {
-        "recipient": "Local fundraisers",
-        "title": "Another Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-        "list": [
+        recipient: "Local fundraisers",
+        title: "Another Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        list: [
             {
                 "name": 'Fundraiser "Lorem Ipsum 1"',
                 "description": "1 Quis varius quam quisque id diam vel quam elementum pulvinar.",
