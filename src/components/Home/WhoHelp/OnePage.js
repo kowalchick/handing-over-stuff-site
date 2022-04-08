@@ -3,67 +3,172 @@ import { useState } from "react";
 const data = {
     foundations: [
         {
-            title: "Test 1"
-            // Tutaj więcej właściwości - lista rzeczy, opis itp.
+            "name": 'Foundation "Care of my health"',
+            "description": "Purpose and mission: Helping people in a difficult life situation.",
+            "stuff": "clothes, food, household appliances, furniture, toys"
         },
         {
-            title: "Test 2"
+            "name": 'Foundation "For children"',
+            "description": "Purpose and mission: Help children from poor families.",
+            "stuff": "clothes, furniture, toys"
         },
         {
-            title: "Test 3"
+            "name": 'Foundation "No home"',
+            "description": "Purpose and mission: Help for people without a place of residence.",
+            "stuff": "clothes, food, warm blankets"
         },
         {
-            title: "Test 4"
+            "name": 'Foundation "Care of my health"',
+            "description": "Purpose and mission: Helping people in a difficult life situation.",
+            "stuff": "clothes, food, household appliances, furniture, toys"
+        },
+        {
+            "name": 'Foundation "For children"',
+            "description": "Purpose and mission: Help children from poor families.",
+            "stuff": "clothes, furniture, toys"
+        },
+        {
+            "name": 'Foundation "No home"',
+            "description": "Purpose and mission: Help for people without a place of residence.",
+            "stuff": "clothes, food, warm blankets"
+        },
+        {
+            "name": 'Foundation "Care of my health"',
+            "description": "Purpose and mission: Helping people in a difficult life situation.",
+            "stuff": "clothes, food, household appliances, furniture, toys"
+        },
+        {
+            "name": 'Foundation "For children"',
+            "description": "Purpose and mission: Help children from poor families.",
+            "stuff": "clothes, furniture, toys"
+        },
+        {
+            "name": 'Foundation "No home"',
+            "description": "Purpose and mission: Help for people without a place of residence.",
+            "stuff": "clothes, food, warm blankets"
         }
     ],
     orgs: [
         {
-            title: "Org 1"
+            "name": 'Organization "Lorem Ipsum 1"',
+            "description": "1 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "1 Egestas, sed, tempus"
+        },
+        {
+            "name": 'Organization "Lorem Ipsum 2"',
+            "description": "2 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "2 Egestas, sed, tempus"
+        },
+        {
+            "name": 'Organization "Lorem Ipsum 3"',
+            "description": "3 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "3 Egestas, sed, tempus"
+        },
+        {
+            "name": 'Organization "Lorem Ipsum 4"',
+            "description": "4 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "4 Egestas, sed, tempus"
+        },
+        {
+            "name": 'Organization "Lorem Ipsum 5"',
+            "description": "5 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "5 Egestas, sed, tempus"
+        },
+        {
+            "name": 'Organization "Lorem Ipsum 6"',
+            "description": "6 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "6 Egestas, sed, tempus"
         }
+    ],
+    locals: [
+        {
+            "name": 'Organization "Lorem Ipsum 1"',
+            "description": "1 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "1 Egestas, sed, tempus"
+        },
+        {
+            "name": 'Organization "Lorem Ipsum 2"',
+            "description": "2 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "2 Egestas, sed, tempus"
+        },
+        {
+            "name": 'Organization "Lorem Ipsum 3"',
+            "description": "3 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "3 Egestas, sed, tempus"
+        },
+        {
+            "name": 'Organization "Lorem Ipsum 4"',
+            "description": "4 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "4 Egestas, sed, tempus"
+        },
+        {
+            "name": 'Organization "Lorem Ipsum 5"',
+            "description": "5 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "5 Egestas, sed, tempus"
+        },
+        {
+            "name": 'Organization "Lorem Ipsum 6"',
+            "description": "6 Quis varius quam quisque id diam vel quam elementum pulvinar.",
+            "stuff": "6 Egestas, sed, tempus"
+        }
+
     ]
-    // Tutaj reszta danych - zbiórki
+
 };
 
-const MAX_ITEMS = 3;
+const itemsPerPage = 3;
 
 export default function App() {
-    const [currentViewData, setCurrentViewData] = useState(data.foundations);
-    const [currentPage, setCurrentPage] = useState(0);
+    const [currentPage, setCurrentPage] = useState(data.foundations);
+    const [currentItems, setCurrentItems] = useState([]);
 
-    const pagesNeeded = Math.ceil(currentViewData.length / MAX_ITEMS);
-    const pagingItems = Array.from(Array(pagesNeeded)).map(
+    const totalPages = Math.ceil(currentPage.length / itemsPerPage);
+    const pagingItems = Array.from(Array(totalPages)).map(
         (_elt, index) => index
     );
 
-    const currentElements = currentViewData.slice(
-        currentPage * MAX_ITEMS,
-        (currentPage + 1) * MAX_ITEMS
+    const currentElements = currentPage.slice(
+        currentItems * itemsPerPage,
+        (currentItems + 1) * itemsPerPage
     );
-    console.log(currentElements, currentPage * MAX_ITEMS);
+    console.log(currentElements, currentItems * itemsPerPage);
 
     const switchData = (newDataObj) => {
         // Resetujemy najpierw stronę
-        setCurrentPage(0);
+        setCurrentItems(0);
 
         // Ustawiamy nową strukturę
-        setCurrentViewData(newDataObj);
+        setCurrentPage(newDataObj);
     };
 
     return (
         <>
-            <div>
+            <div className="one-page">
                 <button onClick={() => switchData(data.foundations)}>1</button>
                 <button onClick={() => switchData(data.orgs)}>2</button>
+                <button onClick={() => switchData(data.locals)}>3</button>
             </div>
             <br />
-            <div>{currentElements.map((dataItem) => dataItem.title)}</div>
+            <div className="organization-meta">
+                <h2 className="organization-name">{currentElements.map((dataItem) => dataItem.name)}</h2>
+                <h3 className="organization-description">{currentElements.map((dataItem) => dataItem.description)}</h3>
+
+            </div>
+            <div className="organization-stuff">
+                <p>{currentElements.map((dataItem) => dataItem.stuff)}</p>
+            </div>
             <br />
             <div>
-                PAGING
-                {pagingItems.map((item) => (
-                    <button onClick={() => setCurrentPage(item)}>{item + 1}</button>
-                ))}
-            </div>
+                {
+                    totalPages > 1 && <ul className="pagination">
+                        {pagingItems.map((item) => (
+                            <button className="pagination-item" onClick={() => setCurrentItems(item)}>{item + 1}</button>
+                        ))}
+                    </ul>
+                }
+                    </div>
+
         </>
+
     );
 }
