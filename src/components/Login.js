@@ -83,50 +83,50 @@ const Login = () => {
     return (
         <>
             <NavMenu/>
-            <section className="sign-box">
-                <div className="sign-title ">
-                    <h1 className="fancy">Sign in</h1>
-                </div>
-                <Form className="sign-form" onSubmit={handleLogin} ref={form}>
-                    <div className="sign-form-inputs">
-                        <label className="form-label" htmlFor="name">Email</label>
-                        <Input
-                            className="form-input"
-                            id="email"
-                            name="email"
-                            type="email"
-                            value={email}
-                            onChange={onChangeEmail}
-                            validations={[required]}
-                        />
-                        <label className="form-label" htmlFor="password">Password</label>
-                        <Input
-                            className="form-input"
-                            id="password"
-                            name="password"
-                            type="password"
-                            value={password}
-                            onChange={onChangePassword}
-                            validations={[required]}
-                        />
+                <section className="sign-box">
+                    <div className="sign-title ">
+                        <h1 className="fancy">Sign in</h1>
                     </div>
-                    <div className="sign-btns">
+                    <Form className="sign-form" onSubmit={handleLogin} ref={form}>
+                        <div className="sign-form-inputs">
+                            <label className="form-label" htmlFor="name">Email</label>
+                            <Input
+                                className="form-input"
+                                id="email"
+                                name="email"
+                                type="email"
+                                value={email}
+                                onChange={onChangeEmail}
+                                validations={[required]}
+                            />
+                            <label className="form-label" htmlFor="password">Password</label>
+                            <Input
+                                className="form-input"
+                                id="password"
+                                name="password"
+                                type="password"
+                                value={password}
+                                onChange={onChangePassword}
+                                validations={[required]}
+                            />
+                        </div>
+                        <div className="sign-btns">
+                            {
+                                isLoggedIn ? <>
+                                    <Link className="sign-link" to="/login">Sign in</Link>
+                                    <button className="sign-btn">Sign up</button>
+                                </> : <>
+                                    <Link className="sign-link" to="/register/">Sign up</Link>
+                                    <button className="sign-btn">Sign in</button>
+                                </>
+                            }
+                        </div>
                         {
-                            isLoggedIn ? <>
-                                <Link className="sign-link" to="/login">Sign in</Link>
-                                <button className="sign-btn">Sign up</button>
-                            </> : <>
-                                <Link className="sign-link" to="/register/">Sign up</Link>
-                                <button className="sign-btn">Sign in</button>
-                            </>
+                            loading && <div className="loading" style={{margin: "20px auto"}}/>
                         }
-                    </div>
-                    {
-                        loading && <div className="loading" style={{margin: "20px auto"}}/>
-                    }
-                    <CheckButton style={{ display: "none" }} ref={checkBtn} />
-                </Form>
-            </section>
+                        <CheckButton style={{ display: "none" }} ref={checkBtn} />
+                    </Form>
+                </section>
         </>
 
     );

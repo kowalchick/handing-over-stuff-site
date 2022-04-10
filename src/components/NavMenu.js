@@ -54,7 +54,7 @@ const NavMenu = () => {
                     <nav className="nav">
                         <ul className="nav-list">
                             <li className="nav-item">
-                                <NavLink className="nav-link"  to="/">Start</NavLink>
+                                <NavLink className="nav-link" activeClassName="active" to="/">Start</NavLink>
                             </li>
                             {
                                 isHome && <ScrollLink to='three-columns' text={"What is all about?"}/>
