@@ -1,6 +1,6 @@
-# Handing-over React App
+# Handing-over stuff React App
 
-This is a single-page react website to hand over unwanted stuff to those who are in need.
+This is a single-page react website to created to hand over unwanted stuff to those who are in need.
 I created this project by using 'Create React App' command. 
 
 ### Design of the app
@@ -17,7 +17,7 @@ Resources
 http://localhost:3000/whoWeHelp
 
 Home
-http://localhost:3000g
+http://localhost:3000
 
 ### State of the app
 
@@ -25,11 +25,11 @@ This is my first react redux app. I used Redux to implement user login and regis
 
 ### Additional info
 
-This project contains forms with validations. I use a few react libraries such as react-scroll, react-router-dom etc.
+This project contains forms with necessary validations. Moreover, I used a few react libraries such as react-scroll, react-router-dom etc.
 
 ### Running the app 
 
-to run the app in the development mode use `npm start`
+To run the app in the development mode use `npm start`
 Open [http://localhost:3000](http://localhost:3001) to view it in your browser.
 
 The page will reload when you make changes.\
