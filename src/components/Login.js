@@ -85,7 +85,7 @@ const Login = () => {
             <NavMenu/>
             <section className="sign-box">
                 <div className="sign-title ">
-                    <h1 className="fancy"> Sign in</h1>
+                    <h1 className="fancy">Sign in</h1>
                 </div>
                 <Form className="sign-form" onSubmit={handleLogin} ref={form}>
                     <div className="sign-form-inputs">

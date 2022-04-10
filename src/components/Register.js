@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import {Link} from 'react-router-dom';
 
 import Form from "react-validation/build/form";
@@ -95,12 +95,13 @@ const Register = () => {
         }
     };
 
+
     return (
         <>
             <NavMenu/>
             <section className="sign-box">
                 <div className="sign-title ">
-                    <h1 className="fancy"> Sign in</h1>
+                    <h1 className="fancy">Sign up</h1>
                 </div>
                 <Form className="sign-form" onSubmit={handleRegister} ref={form}>
                     <div className="sign-form-inputs">
@@ -139,11 +140,11 @@ const Register = () => {
                     <div className="sign-btns">
                         {
                             successful ? <>
-                                <Link className="sign-link" to="/login/">Sign in</Link>
-                                <button className="sign-btn">Sign up</button>
-                            </> : <>
-                                <Link className="sign-link" to="/register/">Sign up</Link>
+                                <Link className="sign-link" to="/login/">Sign up</Link>
                                 <button className="sign-btn">Sign in</button>
+                            </> : <>
+                                <Link className="sign-link" to="/register/">Sign in</Link>
+                                <button className="sign-btn">Sign up</button>
                             </>
                         }
                     </div>

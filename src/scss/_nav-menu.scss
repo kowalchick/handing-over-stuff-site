@@ -16,6 +16,21 @@
   .decoration{
     border: solid 0.75px $yellow;
   }
+  &-item {
+    display: inline-block;
+    font-family: $font-base;
+    font-size: 0.875rem;
+    font-weight: normal;
+    text-decoration: none;
+    color: $grey;
+    padding: 10px;
+  }
+  &-email {
+    font-size: 0.875rem;;
+    color: #000000;
+    display: inline-block;
+    margin-right: 20px;
+  }
 }
 .nav {
   &-list {
@@ -36,5 +51,5 @@
   }
 }
 .active {
-  border: solid 0.75px $darkgrey;
+  border: solid 0.75px $grey;
 }
