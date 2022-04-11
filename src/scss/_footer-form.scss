@@ -52,6 +52,7 @@
 .input-wrapper {
   display: inline-block;
   width: 50%;
+
   &::after {
     content: "";
     display: block;
@@ -80,4 +81,14 @@
     background-color: $brown;
   }
 }
+}
+
+.error-text {
+  color: red;
+  margin: 0;
+}
+.message-sent {
+  color: #03aa15;
+  font-weight: 600;
+  transform: translateY(100px);
 }
