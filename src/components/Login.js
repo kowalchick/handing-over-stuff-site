@@ -76,10 +76,6 @@ const Login = () => {
         }
     };
 
-    if (isLoggedIn) {
-        return <Link to="/" />;
-    }
-
     return (
         <>
             <NavMenu/>
@@ -113,7 +109,15 @@ const Login = () => {
                         <div className="sign-btns">
                             <>
                                 <Link className="sign-link" to="/register/">Sign up</Link>
-                                <button className="sign-btn">Sign in</button>
+                                {
+                                    isLoggedIn ? <>
+                                        <Link to="/">
+                                            <button className="sign-btn">Sign in</button>
+                                        </Link>
+                                    </> : <>
+                                        <button className="sign-btn">Sign in</button>
+                                    </>
+                                }
                             </>
                         </div>
                         {
