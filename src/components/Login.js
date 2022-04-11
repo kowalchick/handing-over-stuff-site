@@ -111,15 +111,10 @@ const Login = () => {
                             />
                         </div>
                         <div className="sign-btns">
-                            {
-                                isLoggedIn ? <>
-                                    <Link className="sign-link" to="/login">Sign in</Link>
-                                    <button className="sign-btn">Sign up</button>
-                                </> : <>
-                                    <Link className="sign-link" to="/register/">Sign up</Link>
-                                    <button className="sign-btn">Sign in</button>
-                                </>
-                            }
+                            <>
+                                <Link className="sign-link" to="/register/">Sign up</Link>
+                                <button className="sign-btn">Sign in</button>
+                            </>
                         </div>
                         {
                             loading && <div className="loading" style={{margin: "20px auto"}}/>

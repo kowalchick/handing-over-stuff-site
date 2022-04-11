@@ -40,8 +40,8 @@ const vpassword = (value) => {
     }
 };
 
-const vrepeatpassword = (repeatPassword, password) => {
-    if ((typeof repeatPassword === "string") && (password !== repeatPassword)) {
+const vrepeatpassword = (repPass, props) => {
+    if ((typeof repPass === "string") && (props.password !== repPass)) {
         return (
             <div className="error-input" role="alert">
                 Passwords must match.
@@ -59,7 +59,6 @@ const Register = () => {
     const [repeatPassword, setRepeatPassword] = useState("");
     const [successful, setSuccessful] = useState(false);
 
-    // const { message } = useSelector(state => state.message);
     const dispatch = useDispatch();
 
     const onChangeEmail = (e) => {
@@ -132,21 +131,25 @@ const Register = () => {
                             name="repeatPassword"
                             type="password"
                             value={repeatPassword}
+                            password={password}
                             onChange={onChangeRepeatPassword}
                             validations={[required, vrepeatpassword]}
                         />
                     </div>
 
                     <div className="sign-btns">
-                        {
-                            successful ? <>
-                                <Link className="sign-link" to="/login/">Sign up</Link>
-                                <button className="sign-btn">Sign in</button>
-                            </> : <>
-                                <Link className="sign-link" to="/register/">Sign in</Link>
-                                <button className="sign-btn">Sign up</button>
-                            </>
-                        }
+                         <>
+                                <Link className="sign-link" to="/login/">Sign in</Link>
+                             {
+                                 successful ? <>
+                                     <Link to="/">
+                                         <button className="sign-btn">Sign up</button>
+                                     </Link>
+                                 </> : <>
+                                     <button className="sign-btn">Sign up</button>
+                                 </>
+                             }
+                         </>
                     </div>
                     <CheckButton style={{ display: "none" }} ref={checkBtn} />
                 </Form>
