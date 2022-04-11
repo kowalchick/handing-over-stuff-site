@@ -1,13 +1,13 @@
-import * as actions from './actionTypes';
-
-export const getSigninAction = (email, password) => ({
-    type: actions.ACTION_SIGNIN,
-    payload: {
-      password,
-      email
-    },
-
-});
+// import * as actions from './actionTypes';
+//
+// export const getSigninAction = (email, password) => ({
+//     type: actions.ACTION_SIGNIN,
+//     payload: {
+//       password,
+//       email
+//     },
+//
+// });
 
 // import { SET_CURRENT_USER, REGISTER_SUCCESS, LOGOUT, GET_ERRORS } from "./actionTypes";
 //
