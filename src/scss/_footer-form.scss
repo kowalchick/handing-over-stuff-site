@@ -27,6 +27,9 @@
   textarea {
     resize: none;
     display: block;
+    border-bottom: solid 1px $darkgrey;
+    width: 95%;
+
   }
   label, input {
     display: block;
@@ -49,25 +52,21 @@
   margin-top: 80px;
 }
 
-.input-wrapper {
-  display: inline-block;
-  width: 50%;
-  &::after {
-    content: "";
-    display: block;
-    border-bottom: solid 1px $darkgrey;
-    width: 90%;
-    padding-top: 12px;
+  .input-wrapper {
+    display: inline-block;
+    width: 50%;
+    input {
+      border-bottom: solid 1px $darkgrey;
+      width: 90%;
+      padding-top: 20px;
+      padding-bottom: 12px;
+    }
 
   }
-
-}
-.submit-wrapper {
+  .submit-wrapper {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  border-top: solid 1px $darkgrey;
-
 }
 .form-submit {
   font-weight: normal;
@@ -80,4 +79,15 @@
     background-color: $brown;
   }
 }
+
+}
+
+.error-text {
+  color: red;
+  margin: 0;
+}
+.message-sent {
+  color: #03aa15;
+  font-weight: 600;
+  transform: translateY(100px);
 }
