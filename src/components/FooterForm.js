@@ -1,153 +1,72 @@
-import React, {useRef, useState} from 'react';
-import axios from "axios";
-import Form from "react-validation/build/form";
-import Input from "react-validation/build/input";
-import Textarea from "react-validation/build/textarea";
-import CheckButton from "react-validation/build/button";
+import React, {useState} from 'react';
+// import axios from "axios";
 
-import {isEmail} from 'validator';
 
-import {useDispatch} from "react-redux";
-import {register} from "../redux/actions/authAction";
+const validate = (name, email, message) => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const errors = {};
+    if (!name) {
+        errors.name = 'This field is required';
+    } else if (name.indexOf(" ") >= 0) {
+        errors.name = 'This is not a valid name';
+    }
+
+    if (!email) {
+        errors.email = 'This field is required';
+    } else if (!re.test(String(email).toLowerCase())) {
+        errors.email = 'This is not a valid email';
+    }
+
+    if (!message) {
+        errors.message = 'This field is required';
+    } else if (message.length < 120) {
+        errors.message = 'The message must be at least 120 characters';
+    }
+    if (!errors.name && !errors.email && !errors.message) {
+        errors.ok = true;
+    }
+    return errors;
+}
 
 const FooterForm = () => {
-
-    const required = (value) => {
-        if (!value) {
-            return (
-                <div className="error-input" role="alert">
-                    This field is required
-                </div>
-            );
-        }
-    };
-
-    const vName = (value) => {
-        if (value.indexOf(" ") >= 0) {
-            return (
-                <div className="error-input" role="alert">
-                    This is not a valid name.
-                </div>
-            );
-        }
-    };
-
-    const vEmail = (value) => {
-        if (!isEmail(value)) {
-            return (
-                <div className="error-input" role="alert">
-                    This is not a valid email
-                </div>
-            );
-        }
-    };
-
-    const vMessage= (value) => {
-        if (value.length < 120) {
-            return (
-                <div className="error-input" role="alert">
-                    The message must be at least 120 characters
-                </div>
-            );
-        }
-    };
-
-    // const validate = (name, email, message) => {
-    //     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    //     const errors = {};
-    //     if (!name) {
-    //         errors.name = 'This field is required';
-    //     } else if (name.indexOf(" ") >= 0) {
-    //         errors.name = 'This is not a valid name';
-    //     }
-    //
-    //     if (!email) {
-    //         errors.email = 'This field is required';
-    //     } else if (!re.test(String(email).toLowerCase())) {
-    //         errors.email = 'This is not a valid email';
-    //     }
-    //
-    //     if (!message) {
-    //         errors.message = 'This field is required';
-    //     } else if (message.length < 120) {
-    //         errors.message = 'The message must be at least 120 characters';
-    //     }
-    //     if (!errors.name && !errors.email && !errors.message) {
-    //         errors.ok = true;
-    //     }
-    //     return errors;
-    // }
-
-
-    // const handleSubmit = e => {
-    //     e.preventDefault();
-    //     const result = validate(name, email, message);
-    //     result.ok ? sendMessage() : setErrors(result);
-    // }
-    const form = useRef();
-    const checkBtn = useRef();
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [serverResponse, setServerResponse] = useState('');
+    const [errors, setErrors] = useState({});
 
-    const setSuccessful = () => {
-        axios.post('https://fer-api.coderslab.pl/v1/portfolio/contact', {
-            name,
-            email,
-            message
-        })
-            .then(response => {
-                console.log(response);
-                if (response.status === 200) {
-                    setServerResponse('Thank you for your message');
-                    setName('');
-                    setEmail('');
-                    setMessage('');
-                    setTimeout(()=>{
-                        setServerResponse('');
-                    },3000)
-                }
-            })
-            .catch(error => {
-                console.log(error);
+    const setSuccess = async() => {
+        try {
+            const response = await fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message,
+                }),
             });
-    }
-
-    const dispatch = useDispatch();
-
-    const onChangeName = (e) => {
-        const name = e.target.value;
-        setName(name);
-    };
-
-    const onChangeEmail = (e) => {
-        const email = e.target.value;
-        setEmail(email);
-    };
-
-    const onChangeMessage= (e) => {
-        const message = e.target.value;
-        setMessage(message);
+            if (response.status === 200) {
+                setServerResponse('Thank you for your message. We will reply soon.');
+                setName('');
+                setEmail('');
+                setMessage('');
+                setTimeout(()=>{
+                    setServerResponse('');
+                },3000)
+            }
+        } catch(error) {
+            console.log(error);
+        }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        setSuccessful(false);
-
-        form.current.validateAll();
-
-        if (checkBtn.current.context._errors.length === 0) {
-            dispatch(register(name, email, message))
-                .then(() => {
-                    setSuccessful(true);
-                })
-                .catch(() => {
-                    setSuccessful(false);
-                });
-        }
+        const result = validate(name, email, message);
+        result.ok ? setSuccess() : setErrors(result);
     };
 
     return (
@@ -161,50 +80,60 @@ const FooterForm = () => {
                         {
                             serverResponse && <h3 className="message-sent">{serverResponse}</h3>
                         }
-                        <Form autoComplete="off" className="contact-form" onSubmit={handleSubmit} ref={form}>
+                        <form autoComplete="off" className="contact-form" onSubmit={handleSubmit}>
                             <div className="input-wrapper">
                                 <label className="form-label" htmlFor="name">Type your name</label>
-                                <Input
+                                <input
                                     id="name"
                                     name="name"
                                     type="text"
                                     placeholder="John"
                                     value={name}
-                                    className="form-input"
-                                    onChange={onChangeName}
-                                    validations={[required, vName]}
+                                    className={errors.name ? "form-input error-text" : "form-input"}
+                                    onChange={e => setName(e.target.value)}
+                                    onFocus={() => {
+                                        setErrors({});
+                                    }}
                                 />
+                                {
+                                    errors.name && <span className="error-text">{errors.name}</span>
+                                }
                             </div>
                             <div className="input-wrapper">
                                 <label className="form-label" htmlFor="email">Type your e-mail</label>
-                                <Input
+                                <input
                                     id="email"
                                     name="email"
                                     type="email"
                                     placeholder="johnkowalski@gmail.com"
                                     value={email}
                                     className="form-input"
-                                    onChange={onChangeEmail}
-                                    validations={[required, vEmail]}
+                                    onChange={e => setEmail(e.target.value)}
+                                    onFocus={() => setErrors({})}
                                 />
+                                {
+                                    errors.email && <span className="error-text">{errors.email}</span>
+                                }
                             </div>
                             <label className="form-label" htmlFor="message">Leave a message</label>
-                            <Textarea
+                            <textarea
                                 rows="4"
                                 id="message"
                                 name="message"
                                 placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                 do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                                 value={message}
-                                className="form-input"
-                                onChange={onChangeMessage}
-                                validations={[required, vMessage]}
+                                className="form-input textarea"
+                                onChange={e => setMessage(e.target.value)}
+                                onFocus={() => setErrors({})}
                             />
+                            {
+                                errors.message && <div className="error-text">{errors.message}</div>
+                            }
                             <div className="submit-wrapper">
                                 <button type="submit" className="form-submit btn">Send</button>
                             </div>
-                            <CheckButton style={{ display: "none" }} ref={checkBtn} />
-                        </Form>
+                        </form>
                     </div>
                 </div>
             </div>
