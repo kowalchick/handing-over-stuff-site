@@ -5,6 +5,7 @@ import FormHeader from "./FormHeader";
 import Survey from "./Survey";
 import {animateScroll} from 'react-scroll';
 
+
 const Forms = () => {
 
     useEffect(() => {
@@ -12,12 +13,12 @@ const Forms = () => {
     }, [])
 
     return (
-        <>
+        <div>
             <NavMenu/>
             <FormHeader />
                 <Survey />
             <FooterForm/>
-        </>
+        </div>
     );
 }
 
