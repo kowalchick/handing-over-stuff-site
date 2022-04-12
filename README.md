@@ -25,7 +25,7 @@ This is my first react redux app. I used Redux to implement user login and regis
 
 ### Additional info
 
-This project contains forms with necessary validations. Moreover, I used a few react libraries such as react-scroll, react-router-dom etc. I use POST method of fetch API to send data of contact form section. 
+This project contains forms with necessary validations. Moreover, I used a few react libraries such as react-scroll, react-router-dom etc. I used POST method of fetch API to send contact form data. 
 
 ### Running the app 
 
