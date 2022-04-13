@@ -108,5 +108,12 @@
         }
       ]
     }
+  ],
+  "users": [
+    {
+      "email": "qwe@gmail.com",
+      "password": "qwerty",
+      "id": "qwe@gmail.com"
+    }
   ]
 }

@@ -5,6 +5,7 @@ import {
     LOGIN_FAIL,
     LOGOUT,
     SET_MESSAGE,
+    ACTION_INIT,
 } from "./actionTypes";
 
 import AuthService from "../../services/authService";
@@ -83,4 +84,12 @@ export const logout = () => (dispatch) => {
     dispatch({
         type: LOGOUT,
     });
+};
+
+export const initUser = () => {
+  const user = localStorage.getItem("user");
+  return {
+      type: ACTION_INIT,
+      payload: user,
+  }
 };
