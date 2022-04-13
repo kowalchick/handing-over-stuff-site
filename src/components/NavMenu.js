@@ -19,22 +19,22 @@ const NavMenu = () => {
                         {
                             currentUser ?
                         <>
-                            <h3 className="nav-user-email">Hi {currentUser.email}</h3>
+                            <h3 className="nav-user-email">Hi, {currentUser.email}</h3>
                             {
                                 isHome ? <NavLink to='/hand-over/'
                                                   className="nav-user-item decoration">Hand over stuff
                                     </NavLink> : <Scroll
                                                     className="nav-user-item decoration"
-                                                    to={"survey-form"}
+                                                    to={"survey"}
                                                     spy={true}
                                                     smooth={true}
-                                                    duration={500}>{"Form"}
+                                                    duration={500}>{"Hand over stuff"}
                                                   </Scroll>
                             }
-                            <NavLink to="/"
-                                     activeClassName=""
-                                     className="nav-user-item">Home
-                            </NavLink>
+                            {/*<NavLink to="/"*/}
+                            {/*         activeClassName=""*/}
+                            {/*         className="nav-user-item">Home*/}
+                            {/*</NavLink>*/}
                             <button className="nav-user-logout" onClick={logout}>Logout</button>
                         </>
                         : <>
@@ -66,7 +66,7 @@ const NavMenu = () => {
                                 isHome && <ScrollLink to='foundations' text={"Foundations and organizations"}/>
                             }
                             {
-                                !isHome && <ScrollLink to='survey-form' text={"Fill the form"}/>
+                                !isHome && <ScrollLink to='survey' text={"Fill the form"}/>
                             }
                             <ScrollLink to='footer' text={"Contact us"}/>
                         </ul>
