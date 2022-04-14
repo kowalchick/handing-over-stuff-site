@@ -1,0 +1,14 @@
+.survey {
+  padding: 35px 0;
+  background-color: #E8E8E6;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+
+  &-wrapper {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
