@@ -2,36 +2,13 @@ import React, {useContext} from 'react';
 
 import {FormContext, WHAT_TO_GIVE_OPTIONS} from "../FormsContext";
 
-function Variant1(props) {
-  const {data, setData} = useContext(FormContext);
+function Variant1() {
+  const {variant1Data, updateVariant1Data} = useContext(FormContext);
 
-  // Lepiej zbudować handler specyficzny dla tego, co się dzieje na danym kroku
-  // Zastanów się też gdzie lepiej trzymać buttonki - jak zaktualizować informację do następnego kroku?
-  // (walidacje real-time vs walidacje na onClick
-  const updateWhatToGive = (whatToGive) => {
-    setData({
-      ...data,
-      whatToGive
-    })
-  };
-
-  console.log(data);
-
-  // const handleFormChange =(e) => {
-  //     const checked = e.target.checked;
-  //     const name = e.target.name;
-  //
-  //     setFormsData (prev => {
-  //         return{
-  //             ...prev,
-  //             [name]: checked
-  //         }
-  //     })
-  // }
-
+  console.log(variant1Data, updateVariant1Data);
   return (<>
       VARIANT 1
-      <select onChange={evt => updateWhatToGive(evt.target.value)}>
+      <select onChange={evt => updateVariant1Data({whatToGive: evt.target.value})} value={variant1Data.whatToGive}>
         {
           Object.keys(WHAT_TO_GIVE_OPTIONS).map(key => <option key={key} value={key}>{WHAT_TO_GIVE_OPTIONS[key]}</option>)
         }

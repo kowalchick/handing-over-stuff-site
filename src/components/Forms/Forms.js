@@ -4,7 +4,7 @@ import FooterForm from "../FooterForm";
 import FormHeader from "./FormHeader";
 import Survey from "./Survey";
 import {animateScroll} from 'react-scroll';
-
+import {FormProvider} from "./FormsContext";
 
 const Forms = () => {
 
@@ -13,12 +13,12 @@ const Forms = () => {
     }, [])
 
     return (
-        <div>
+      <FormProvider>
             <NavMenu/>
             <FormHeader />
                 <Survey />
             <FooterForm/>
-        </div>
+      </FormProvider>
     );
 }
 

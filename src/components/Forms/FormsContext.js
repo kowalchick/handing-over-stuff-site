@@ -11,8 +11,8 @@ export const WHAT_TO_GIVE_OPTIONS = {
 export const FormContext = createContext(null);
 
 const DEFAULT_DATA = {
-    whatToGive: WHAT_TO_GIVE_OPTIONS.CLOTHES_TO_PASS,
-    bags: "--choose--",
+    whatToGive: Object.keys(WHAT_TO_GIVE_OPTIONS)[0],
+    bags: null,
     localization: "--choose--",
     whoToHelp: false,
     customOrganization: "",
@@ -28,9 +28,15 @@ const DEFAULT_DATA = {
 export const FormProvider = ({children}) => {
     const [data, setData] = useState(DEFAULT_DATA);
 
+    const variant1Data = {whatToGive: data.whatToGive};
+    const updateVariant1Data = (variantData) => setData({
+        ...data,
+        whatToGive: variantData.whatToGive
+    });
+
     // FormProvider -> Provider. Context zawsze wystawia atrybut, który nazywa się "Provider" :)
     return (
-        <FormContext.Provider value={{data, setData}}>
+        <FormContext.Provider value={{variant1Data, updateVariant1Data}}>
             {children}
         </FormContext.Provider>
     )
