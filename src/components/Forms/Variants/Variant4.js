@@ -1,9 +1,9 @@
 import React from 'react';
 
-function SumUp(props) {
+function Variant4(props) {
     return (
         <div></div>
     );
 }
 
-export default SumUp;
+export default Variant4;
