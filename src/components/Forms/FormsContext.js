@@ -24,10 +24,10 @@ export const FormProvider = (props) => {
     const [formsData, setFormsData] = useState(data);
 
     return (
-        <FormContext.Provider value={[formsData, setFormsData]}>
+        <FormContext.FormProvider value={[formsData, setFormsData]}>
             {
                 props.children
             }
-        </FormContext.Provider>
+        </FormContext.FormProvider>
     )
 }
