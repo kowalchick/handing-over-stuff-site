@@ -1,9 +1,7 @@
 .survey {
   padding: 35px 0;
-  background-color: #E8E8E6;
-  background-repeat: no-repeat;
+  background: url("../assets/Background-Form.jpeg") #E8E8E6 no-repeat right;
   background-size: cover;
-  background-position: right;
 
   &-wrapper {
     min-height: calc(100vh - 70px);
@@ -11,4 +9,26 @@
     flex-direction: column;
     justify-content: space-between;
   }
+}
+.form-nav {
+  &-btn{
+    font-family: $font-base;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 180px;
+    height: 80px;
+    background: none;
+    outline: none;
+    border: .75px solid $darkgrey;
+    cursor: pointer;
+    text-transform: none;
+    margin-right: 50px;
+  }
+}
+.form-inputs {
+  color: $darkgrey;
+  font-size: 1.5rem;
+  font-weight: 300;
+  width: 50%;
+  min-width: 600px;
 }
