@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from "react-redux";
 import 'whatwg-fetch';
 
-import './settings/main.scss';
-import App from './App';
 import {store} from "./redux/store";
-import {Provider} from "react-redux";
+import './settings/main.scss';
+
+import App from './App';
 
 ReactDOM.render(
     <React.StrictMode>

@@ -20,7 +20,7 @@
     line-height: 3.4375rem;
     font-weight: normal;
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 120px; // Unikaj takich dużych marginesów, staraj się pozycjonować elementy layoutami, np. flex, css grid-em itp.
 
   }
   &-text {

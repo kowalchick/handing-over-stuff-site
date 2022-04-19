@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 // import axios from "axios";
 
 
+// To idealny kawałek kodu do wyrzucenia do np. pliku `utils/validation.js` i przerobienia na mniejsze metody
 const validate = (name, email, message) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const errors = {};

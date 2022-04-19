@@ -10,6 +10,9 @@ export const WHAT_TO_GIVE_OPTIONS = {
 
 export const FormContext = createContext(null);
 
+// Postaraj się dalej poprawić ten obiekt tak, aby oddzielić prezentację wizualną od wartości, jak np. z `whatToGive`
+// W szczególności - localization, whoToHelp itp.
+// Możesz zamknąć dane adresowe w zagnieżdżonym obiekcie, np. `location: {street: "", city: "", /* tutaj reszta */}` itp.
 const DEFAULT_DATA = {
     whatToGive: Object.keys(WHAT_TO_GIVE_OPTIONS)[0],
     bags: null,

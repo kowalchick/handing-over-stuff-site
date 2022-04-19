@@ -33,7 +33,7 @@
     color: $darkgrey;
     font-size: 2.375rem;
     font-weight: 400;
-    letter-spacing: -0.76px;
+    letter-spacing: -0.76px; // Unikaj "niepikselowych" miar - przeglądarka i tak w większości przypadków zaokrągli to do jednego piksela
     position: relative;
     margin-bottom: 100px;
     text-align: center;
