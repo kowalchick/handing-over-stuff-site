@@ -31,7 +31,7 @@ const Survey = () => {
         return <Variant4/>
       case 5:
         return <SumUp/>
-      case 6:
+      default: // Z założenia switch/case powinien mieć "default", jeśli inne dopasowania się nie udadzą - może to być np. ostatnia opcja, bądź najpopularniejsza opcja itp.
         return <ThanksMessage/>
     }
   }
