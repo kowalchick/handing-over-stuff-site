@@ -2,7 +2,8 @@
 
 ## Link to the demo
 
-Link to the demo of this site is available [here](http://localhost:3001).
+Link to the demo of this site is available [here](https://handing-over-charity-site-kowalchick.netlify.app/).
+
 This project of mine is almost done. Steps of main "handing over stuff"and its validation are missing. I'm gonna finish i soon. 
 ### Design of the app
 

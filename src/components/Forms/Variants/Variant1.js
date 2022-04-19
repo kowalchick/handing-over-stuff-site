@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 
-import {FormContext, WHAT_TO_GIVE_OPTIONS} from "../FormsContext";
+import {FormContext} from "../FormsContext";
+// import {WHAT_TO_GIVE_OPTIONS} "../FormsContext";
 
 function Variant1() {
   const {variant1Data, updateVariant1Data} = useContext(FormContext);
