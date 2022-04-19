@@ -38,23 +38,25 @@ const Survey = () => {
   return (
     <section className="survey">
       <div className="container">
-        <div className="form-inputs">
-          {
-            getCurrentVariant()
-          }
-        </div>
-        <div className="form-nav">
-          {
-            ![1, 6].includes(currentPage) &&
-            <button className="form-nav-btn btn" onClick={() => setCurrentPage(prev => prev - 1)}>Previous</button>
-          }
-          {
-            ![5, 6].includes(currentPage) && <button className="form-nav-btn btn">Next</button>
-          }
-          {
-            [5].includes(currentPage) &&
-            <button className="form-nav-btn btn" onClick={() => setCurrentPage(prev => prev + 1)}>Confirm</button>
-          }
+        <div className="survey-wrapper">
+          <div className="form-inputs">
+            {
+              getCurrentVariant()
+            }
+          </div>
+          <div className="form-nav">
+            {
+                ![1, 6].includes(currentPage) &&
+                <button className="form-nav-btn btn" onClick={() => setCurrentPage(prev => prev - 1)}>Previous</button>
+            }
+            {
+                ![5, 6].includes(currentPage) && <button className="form-nav-btn btn">Next</button>
+            }
+            {
+                [5].includes(currentPage) &&
+                <button className="form-nav-btn btn" onClick={() => setCurrentPage(prev => prev + 1)}>Confirm</button>
+            }
+          </div>
         </div>
       </div>
     </section>

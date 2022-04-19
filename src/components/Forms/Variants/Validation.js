@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Validation(props) {
+function Validation() {
     return (
         <div></div>
     );
