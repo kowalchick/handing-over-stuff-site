@@ -91,3 +91,13 @@
   font-weight: 600;
   transform: translateY(100px);
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .footer:after {
+    opacity: 0.15;
+    background-position: center;
+  }
+  .contact-box {
+    justify-content: center;
+  }
+}
