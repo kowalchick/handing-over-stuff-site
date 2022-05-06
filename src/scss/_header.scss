@@ -44,3 +44,45 @@
     justify-content: space-around;
   }
 }
+
+@media (max-width: $breakpoint-comp) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+  .header-btn {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .header-img {
+    display: none;
+  }
+  .header-title {
+    font-size: 1.75rem;
+    line-height: 2.875rem;
+  }
+  .header-box {
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+  .header-btn {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+  .header-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      background: url("../assets/Home-Hero-Image.jpeg") no-repeat bottom center;
+      background-size: cover;
+      opacity: 0.1;
+      inset: 0 0 0 -50%;
+    }
+  }
+}
