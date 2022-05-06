@@ -88,6 +88,16 @@
   width: 80px;
   height: 80px;
 }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .loading:after {
   content: " ";
   display: block;

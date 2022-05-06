@@ -33,3 +33,21 @@
     align-self: flex-end;
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .about {
+    background: $white;
+
+    &-content {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    &-text {
+      font-size: 1.25rem;
+      line-height: 2.1875rem;
+    }
+
+  }
+}
