@@ -7,11 +7,11 @@ Link to the demo of this site is available [here](https://handing-over-charity-s
 This project of mine is almost done. Steps of main "handing over stuff"and its validation are missing. I'm gonna finish i soon. 
 ### Design of the app
 
-Design of this app is my school's property. I implemented it using Adobe XD application. In the feature I want to redesign this project to be more user-friendly (improve the accessibility). 
+I implemented [this design](https://xd.adobe.com/spec/f11fc670-7af2-4502-4013-c1f66f8d3332-872e/grid/) using Adobe XD application. In the feature I want to redesign this project to be more user-friendly (improve the accessibility). 
 
 ### Backend info
 
-I had no access to any backend data. To mock the data I used json server. 
+To mock the data I used json server. 
 
 To start use a command: `json-server --watch ./db.json`
 
