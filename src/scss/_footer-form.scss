@@ -73,13 +73,12 @@
   font-size: 1.125rem;
   line-height: 2rem;
   padding: 10px 40px;
-  margin-top: 40px;
+  margin: 40px auto;
   background: none;
   &:hover, &:focus {
     background-color: $brown;
   }
 }
-
 }
 
 .error-text {
