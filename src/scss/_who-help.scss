@@ -121,3 +121,39 @@
 .current {
   border: .75px solid $darkgrey;
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .organization {
+    flex-direction: column;
+    align-items: center;
+    &-name {
+      font-size: 1.25rem;
+      font-weight: 400;
+      text-align: center;
+    }
+    &-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-description {
+      text-align: center;
+    }
+
+    &-stuff {
+      margin: 0;
+      text-align: center;
+    }
+  }
+  .one-page-title {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .pages-btn {
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin: 0;
+    width: 100%;
+  }
+}

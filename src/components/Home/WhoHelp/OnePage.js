@@ -40,7 +40,7 @@ export default function OnePage({data}) {
                         <li className="organization" key={index}>
                             {
                                 <>
-                                    <div>
+                                    <div className="Organization-box">
                                         <h2 className="organization-name">{item.name}</h2>
                                         <h3 className="organization-description">{item.description}</h3>
                                     </div>
