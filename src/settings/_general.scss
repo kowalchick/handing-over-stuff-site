@@ -2,8 +2,8 @@
 @import "fonts";
 @import "colors";
 
-$breakpoint-comp: 1024px; //laptop
-$breakpoint-mobile: 760px;//tablet
+$breakpoint-comp: 1024px;
+$breakpoint-mobile: 760px;
 
 *, *:before, *:after {
   box-sizing: border-box;
