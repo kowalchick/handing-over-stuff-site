@@ -41,6 +41,10 @@ const Steps = () => {
                                     </p>
                                 </div>
                             </div>
+
+
+                    </div>
+                        <div className="steps-box">
                             <div className="step">
                                 <div className="step-icon">
                                     <img src={icon3} alt="hand glass"/>
@@ -67,7 +71,7 @@ const Steps = () => {
                                     </p>
                                 </div>
                             </div>
-                    </div>
+                        </div>
                     </div>
                     <Link to="/hand-over/" className="btn steps-btn">Hand over<br/>stuff</Link>
                 </div>
