@@ -15,7 +15,7 @@ export const FormContext = createContext(null);
 // Możesz zamknąć dane adresowe w zagnieżdżonym obiekcie, np. `location: {street: "", city: "", /* tutaj reszta */}` itp.
 const DEFAULT_DATA = {
     whatToGive: Object.keys(WHAT_TO_GIVE_OPTIONS)[0],
-    bags: null,
+    bags: "--choose--",
     localization: "--choose--",
     whoToHelp: false,
     customOrganization: "",

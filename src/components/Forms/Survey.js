@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Variant1 from "./Variants/Variant1";
-import Variant2 from "./Variants/Variant2";
+import {Variant1} from "./Variants/Variant1";
+import {Variant2} from "./Variants/Variant2";
 import Variant3 from "./Variants/Variant3";
 import Variant4 from "./Variants/Variant4";
 import SumUp from "./Variants/SumUp";
@@ -27,6 +27,11 @@ export const Survey = () => {
         return <ThanksMessage/>
     }
   }
+
+  const handleNextClick = () => {
+    setCurrentPage(prev => prev + 1)
+  }
+
   return (
     <section className="survey">
       <div className="container">
@@ -46,7 +51,7 @@ export const Survey = () => {
                 <button className="form-nav-btn btn" onClick={() => setCurrentPage(prev => prev - 1)}>Previous</button>
             }
             {
-                ![5, 6].includes(currentPage) && <button className="form-nav-btn btn">Next</button>
+                ![5, 6].includes(currentPage) && <button className="form-nav-btn btn" onClick={handleNextClick}>Next</button>
             }
             {
                 [5].includes(currentPage) &&

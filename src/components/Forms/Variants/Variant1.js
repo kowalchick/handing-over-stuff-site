@@ -1,12 +1,11 @@
 import React, {useContext} from 'react';
 
 import {FormContext} from "../FormsContext";
-// import {WHAT_TO_GIVE_OPTIONS} "../FormsContext";
 
-function Variant1() {
+export function Variant1() {
   const {variant1Data, updateVariant1Data} = useContext(FormContext);
 
-  console.log(variant1Data, updateVariant1Data);
+  // console.log(variant1Data, updateVariant1Data);
 
     const handleChange = (e) => {
         const isChecked = e.target.checked;
@@ -50,16 +49,7 @@ function Variant1() {
               <input type="checkbox" id="OTHERS" name="OTHERS" checked={variant1Data.OTHERS} onChange={handleChange}/>
               <span className="checkmark"/>
           </label>
-
-      {/*    VARIANT 1*/}
-      {/*<select onChange={evt => updateVariant1Data({whatToGive: evt.target.value})} value={variant1Data.whatToGive}>*/}
-      {/*  {*/}
-      {/*    Object.keys(WHAT_TO_GIVE_OPTIONS).map(key => <option key={key} value={key}>{WHAT_TO_GIVE_OPTIONS[key]}</option>)*/}
-      {/*  }*/}
-      {/*</select>*/}
     </>
   )
 
 }
-
-export default Variant1;
