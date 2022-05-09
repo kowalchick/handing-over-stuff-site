@@ -42,3 +42,15 @@
     padding-bottom: 50px;
   }
 }
+@media (max-width: $breakpoint-mobile) {
+  .columns-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .columns-column {
+    width: 75%;
+  }
+  .columns-text {
+    padding-bottom: 0;
+  }
+}
