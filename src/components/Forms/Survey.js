@@ -5,19 +5,11 @@ import Variant3 from "./Variants/Variant3";
 import Variant4 from "./Variants/Variant4";
 import SumUp from "./Variants/SumUp";
 import ThanksMessage from "./Variants/ThanksMessage";
-// import {FormContext} from "./FormsContext";
 
-const Survey = () => {
+
+export const Survey = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  // const {data, setData} = useContext(FormContext);
-  //
-  // const variant1Data = {whatToGive: data.whatToGive};
-  // const variant1UpdateData = (variantData) => setData({
-  //   ...data,
-  //   whatToGive: variantData.whatToGive
-  // });
 
-  // console.log(data, variant1Data);
 
   const getCurrentVariant = () => {
     switch (currentPage) {
@@ -31,7 +23,7 @@ const Survey = () => {
         return <Variant4/>
       case 5:
         return <SumUp/>
-      default: // Z założenia switch/case powinien mieć "default", jeśli inne dopasowania się nie udadzą - może to być np. ostatnia opcja, bądź najpopularniejsza opcja itp.
+      default:
         return <ThanksMessage/>
     }
   }
@@ -66,5 +58,3 @@ const Survey = () => {
     </section>
   );
 }
-
-export default Survey;

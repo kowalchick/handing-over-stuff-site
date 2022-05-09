@@ -37,7 +37,6 @@ export const FormProvider = ({children}) => {
         whatToGive: variantData.whatToGive
     });
 
-    // FormProvider -> Provider. Context zawsze wystawia atrybut, który nazywa się "Provider" :)
     return (
         <FormContext.Provider value={{variant1Data, updateVariant1Data}}>
             {children}

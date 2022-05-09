@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
 import {animateScroll} from 'react-scroll';
 
-import NavMenu from "../NavMenu";
-import FooterForm from "../FooterForm";
+import {NavMenu} from "../NavMenu";
+import {FooterForm} from "../FooterForm";
 
-import FormHeader from "./FormHeader";
-import Survey from "./Survey";
+import {FormHeader} from "./FormHeader";
+import {Survey} from "./Survey";
 import {FormProvider} from "./FormsContext";
 
 // 3 grupy importów:
@@ -13,7 +13,7 @@ import {FormProvider} from "./FormsContext";
 // - pochodzące z projektu, ale z innych miejsc
 // - lokalne, te, które zaczynają się od `./` i są specyficzne dla komponentu
 
-const Forms = () => {
+export const Forms = () => {
 
     useEffect(() => {
         animateScroll.scrollTo(0);
@@ -28,5 +28,3 @@ const Forms = () => {
       </FormProvider>
     );
 }
-
-export default Forms;

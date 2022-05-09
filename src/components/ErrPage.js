@@ -1,8 +1,7 @@
 import React from 'react';
 
-const ErrPage =() =>{
+export const ErrPage =() =>{
     return (
-        // Unikaj inline-owego stylowania - lepiej wypchnąć to do SCSS-a
         <h1
             className="fancy"
             style ={{
@@ -16,5 +15,3 @@ const ErrPage =() =>{
         </h1>
     );
 }
-
-export default ErrPage;

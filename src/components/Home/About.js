@@ -1,7 +1,7 @@
 import React from 'react';
 import Signature from '../../assets/Signature.svg';
 
-const About = () => {
+export const About = () => {
     return (
         <section className="about">
             <div className="container">
@@ -23,5 +23,3 @@ const About = () => {
         </section>
     );
 }
-
-export default About;

@@ -1,13 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-// Możesz przenieść je tutaj, do folderu Home, bądź lepiej - do `components/Home/HomeSteps` razem z tym JS-em
 import icon1 from '../../assets/Icon-1.svg';
 import icon2 from '../../assets/Icon-2.svg';
 import icon3 from '../../assets/Icon-3.svg';
 import icon4 from '../../assets/Icon-4.svg';
 
-const Steps = () => {
+export const Steps = () => {
     return (
         <section className="steps">
             <div className="container">
@@ -82,4 +81,3 @@ const Steps = () => {
     );
 }
 
-export default Steps;

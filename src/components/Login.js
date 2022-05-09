@@ -1,18 +1,3 @@
-// import React, {useContext} from 'react';
-// import NavMenu from './NavMenu';
-// import LogForm from './Forms/LogForm';
-// // import {initialState} from "../redux/reducer";
-//
-// const Login = () => {
-//     // const [user] = useContext(initialState);
-//     return (
-//         <>
-//             <NavMenu />
-//                 <LogForm />
-//         </>
-//     );
-// };
-// export default Login;
 import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {Link} from 'react-router-dom';
@@ -22,7 +7,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import { login } from "../redux/actions/authAction";
-import NavMenu from "./NavMenu";
+import {NavMenu} from "./NavMenu";
 
 const required = (value) => {
     if (!value) {
@@ -34,7 +19,7 @@ const required = (value) => {
     }
 };
 
-const Login = () => {
+export const Login = () => {
     const form = useRef();
     const checkBtn = useRef();
 
@@ -131,4 +116,3 @@ const Login = () => {
     );
 };
 
-export default Login;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ThreeColumns = () => {
+export const ThreeColumns = () => {
     return (
         <section className="three-columns">
             <div className="container">
@@ -57,5 +57,3 @@ const ThreeColumns = () => {
         </section>
     );
 };
-
-export default ThreeColumns;

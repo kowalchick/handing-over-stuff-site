@@ -1,6 +1,8 @@
+
 .nav-menu {
   width: 100%;
   position: absolute;
+  font-family: $font-base;
 }
 
 .nav-top {
@@ -19,7 +21,6 @@
 
   &-item {
     display: inline-block;
-    font-family: $font-base;
     font-size: 0.875rem;
     font-weight: normal;
     text-decoration: none;
@@ -35,7 +36,6 @@
   }
 
   &-logout {
-    font-family: $font-base; // Często powtarzasz font-family - czy na pewno jest to potrzebne tak często? A może warto ustawić ten font na całą stronkę?
     color: $grey;
     font-size: 0.875rem;
     font-weight: normal;
@@ -74,36 +74,29 @@
 @media (max-width: $breakpoint-mobile) {
   .nav-top {
     padding-top: 10px;
-  }
-  .nav-user-email {
     font-size: 0.875rem;
-    margin: 0;
-    display: block;
-    text-align: right;
-  }
-  .nav-user-item {
-    font-size: 0.875rem;
-    margin: 5px 0;
-  }
-  .nav-list {
-    margin-top: 0.875rem;
-  }
-  .nav-item {
-    margin: 0;
-  }
-  .nav-link {
-    font-size: 0.875rem;
-    padding: 10px;
+    .nav-user-email {
+      margin: 0;
+      display: block;
+      text-align: right;
+    }
+    .nav-user-item {
+      margin: 5px 0;
+    }
+    .nav-list {
+      margin-top: 0.875rem;
+    }
+    .nav-item {
+      margin: 0;
+    }
+    .nav-link {
+      padding: 10px;
+    }
   }
 }
 
 @media (max-width: 600px) {
   .nav {
-    display: none;
-  }
-}
-@media (min-width: 600px) {
-  .mobile {
     display: none;
   }
 }

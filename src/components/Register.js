@@ -8,7 +8,7 @@ import CheckButton from "react-validation/build/button";
 import {isEmail} from 'validator';
 
 import { register } from "../redux/actions/authAction";
-import NavMenu from "./NavMenu";
+import {NavMenu} from "./NavMenu";
 
 const required = (value) => {
     if (!value) {
@@ -50,7 +50,7 @@ const vrepeatpassword = (repPass, props) => {
     }
 };
 
-const Register = () => {
+export const Register = () => {
     const form = useRef();
     const checkBtn = useRef();
 
@@ -158,5 +158,3 @@ const Register = () => {
 
     );
 };
-
-export default Register;

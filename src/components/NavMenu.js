@@ -6,9 +6,10 @@ import {useSelector} from "react-redux";
 import {logout} from "../redux/actions/authAction";
 
 
-const NavMenu = () => {
+export const NavMenu = () => {
     // Dość sztywne założenie - lepiej byłoby wyciąć to np. do util-a, np. `utils/routing.js` i metod
     // Nie używaj też `window`, a `useLocation` - hook-a z React Router DOM
+
     const isHome = window.location.pathname === "/";
     const isOffHome = window.location.pathname === "/login/" || window.location.pathname === "/register/";
     const { user: currentUser } = useSelector((state) => state.auth);
@@ -33,10 +34,7 @@ const NavMenu = () => {
                                                     duration={500}>{"Hand over stuff"}
                                                   </Scroll>
                             }
-                            {/*<NavLink to="/"*/}
-                            {/*         activeClassName=""*/}
-                            {/*         className="nav-user-item">Home*/}
-                            {/*</NavLink>*/}
+
                             <button className="nav-user-logout" onClick={logout}>Logout</button>
                         </>
                         : <>
@@ -78,5 +76,3 @@ const NavMenu = () => {
         </div>
     );
 }
-
-export default NavMenu;

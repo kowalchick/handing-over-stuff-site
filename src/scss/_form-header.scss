@@ -1,4 +1,4 @@
-.handform {
+.formheader {
   height: 100vh;
 
   &-wrapper {
@@ -98,7 +98,7 @@
 }
 
 @media (max-width: $breakpoint-comp) {
-  .handform-box {
+  .formheader-box {
     position: relative;
     transform: scale(.95);
     margin: auto;
@@ -106,7 +106,7 @@
 }
 
 @media (max-width: $breakpoint-mobile) {
-  .handform-box {
+  .formheader-box {
     &-wrapper:after {
       display: none;
     }
@@ -150,7 +150,7 @@
       }
     }
   }
-  .handform-alert {
+  .formheader-alert {
     padding: 10px 0;
 
     .alert-title {

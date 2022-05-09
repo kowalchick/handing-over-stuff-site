@@ -2,9 +2,9 @@ import React, {useEffect, useState} from 'react';
 
 import {fetchWhoWeHelpData} from "../../../services/dataService";
 
-import OnePage from './OnePage';
+import {OnePage} from './OnePage';
 
-const WhoHelp = () => {
+export const WhoHelp = () => {
     const [data, setData] = useState([]);
     const [activeData, setActiveData] = useState(null);
     useEffect(() => {
@@ -44,4 +44,4 @@ const WhoHelp = () => {
         </section>
     );
 };
-export default WhoHelp;
+

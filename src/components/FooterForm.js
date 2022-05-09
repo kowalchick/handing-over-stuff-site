@@ -1,35 +1,7 @@
 import React, {useState} from 'react';
-// import axios from "axios";
+import {validate} from "../utils/validation";
 
-
-// To idealny kawałek kodu do wyrzucenia do np. pliku `utils/validation.js` i przerobienia na mniejsze metody
-const validate = (name, email, message) => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const errors = {};
-    if (!name) {
-        errors.name = 'This field is required';
-    } else if (name.indexOf(" ") >= 0) {
-        errors.name = 'This is not a valid name';
-    }
-
-    if (!email) {
-        errors.email = 'This field is required';
-    } else if (!re.test(String(email).toLowerCase())) {
-        errors.email = 'This is not a valid email';
-    }
-
-    if (!message) {
-        errors.message = 'This field is required';
-    } else if (message.length < 120) {
-        errors.message = 'The message must be at least 120 characters';
-    }
-    if (!errors.name && !errors.email && !errors.message) {
-        errors.ok = true;
-    }
-    return errors;
-}
-
-const FooterForm = () => {
+export const FooterForm = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -141,5 +113,3 @@ const FooterForm = () => {
         </footer>
     );
 }
-
-export default FooterForm;

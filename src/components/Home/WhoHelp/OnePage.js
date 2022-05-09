@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 const itemsPerPage = 3;
 
-export default function OnePage({data}) {
+export function OnePage({data}) {
     const [currentPage, setCurrentPage] = useState(1);
     const [currentItems, setCurrentItems] = useState([]);
 

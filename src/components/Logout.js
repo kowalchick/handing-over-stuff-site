@@ -1,8 +1,8 @@
 import React from 'react';
-import NavMenu from "./NavMenu";
+import {NavMenu} from "./NavMenu";
 import {Link} from "react-router-dom";
 
-const Logout = () => {
+export const Logout = () => {
     return (
         <>
             <NavMenu/>
@@ -15,5 +15,3 @@ const Logout = () => {
         </>
     );
 };
-
-export default Logout;
