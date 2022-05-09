@@ -2,6 +2,7 @@ import React from 'react';
 
 const ErrPage =() =>{
     return (
+        // Unikaj inline-owego stylowania - lepiej wypchnąć to do SCSS-a
         <h1
             className="fancy"
             style ={{

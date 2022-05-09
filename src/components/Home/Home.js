@@ -1,10 +1,12 @@
 import React from 'react';
-import Header from './Header';
+
 import NavMenu from "../NavMenu";
+import FooterForm from "../FooterForm";
+
+import Header from './Header';
 import ThreeColumns from './ThreeColumns';
 import Steps from "./Steps";
 import About from "./About";
-import FooterForm from "../FooterForm";
 import WhoHelp from "./WhoHelp/WhoHelp";
 
 const Home = () => {

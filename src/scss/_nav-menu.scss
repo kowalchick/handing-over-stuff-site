@@ -35,7 +35,7 @@
   }
 
   &-logout {
-    font-family: $font-base;
+    font-family: $font-base; // Często powtarzasz font-family - czy na pewno jest to potrzebne tak często? A może warto ustawić ten font na całą stronkę?
     color: $grey;
     font-size: 0.875rem;
     font-weight: normal;

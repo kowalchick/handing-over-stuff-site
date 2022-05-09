@@ -11,17 +11,23 @@ import {
 import AuthService from "../../services/authService";
 
 export const register = (email, password) => (dispatch) => {
+    // Staraj się nie używać dwuargumentowego `then`, bo jest on nieco mniej czytelny od
+    // użycia `then()` a po nim odpowiadającego bloku `.catch()`
+   // np. myPromise.then(result => console.log(result)).catch(err => console.error(err));
     return AuthService.register(email, password).then(
         (response) => {
             dispatch({
                 type: REGISTER_SUCCESS,
             });
 
+            // Takie ustawianie wiadomości najczęściej należy bardziej do UI/komponentów.
+           // Można to zrobić np. umieszczając `useEffect` w reakcji na zmianę danych w store
             dispatch({
                 type: SET_MESSAGE,
                 payload: response.data.message,
             });
 
+            // Możesz to pominąć, ten kod powinien z założenia zwrócić Promise, bo używa Redux Thunk
             return Promise.resolve();
         },
         (error) => {
@@ -41,6 +47,7 @@ export const register = (email, password) => (dispatch) => {
                 payload: message,
             });
 
+            // Nie musisz tu chyba dalej reject-ować Promise, wystarczy obsłużyć błąd w reduxie
             return Promise.reject();
         }
     );
@@ -57,6 +64,7 @@ export const login = (email, password) => (dispatch) => {
             return Promise.resolve();
         },
         (error) => {
+          // Powtórzony blok kodu - warto wyciąć go gdzieś i re-użyć
             const message =
                 (error.response &&
                     error.response.data &&

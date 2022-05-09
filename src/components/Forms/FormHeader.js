@@ -1,8 +1,12 @@
 import React from 'react';
 
+// Staraj się używać nazwanych eksportów zamiast domyślnych eksportów, np. export const FormHeader tutaj
+// Potem w innym pliku: `import {FormHeader} from './FormHeader` itp.
 const FormHeader = () => {
     return (
+        // Struktura klas powinna odzwierciedlać strukturę komponentów, np. tutaj możesz użyć `FormHeader` jako nazwy klasy
         <header className="handform " >
+            {/* div w div-ie, ale bez dodatkowych "dzieci" - zazwyczaj da się to spłaszczyć do jednego div-a. */}
             <div className="handform-wrapper ">
                 <div className="handform-box-wrapper">
                     <div className="handform-box">

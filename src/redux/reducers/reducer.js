@@ -31,4 +31,4 @@
     //     return state.filter(sign => sign.id !== action.payload.id)
     // return state;
 
-}
+// }
