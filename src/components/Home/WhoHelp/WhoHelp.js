@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import OnePage from './OnePage';
+
 import {fetchWhoWeHelpData} from "../../../services/dataService";
 
+import OnePage from './OnePage';
 
 const WhoHelp = () => {
     const [data, setData] = useState([]);

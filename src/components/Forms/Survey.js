@@ -31,7 +31,7 @@ const Survey = () => {
         return <Variant4/>
       case 5:
         return <SumUp/>
-      case 6:
+      default: // Z założenia switch/case powinien mieć "default", jeśli inne dopasowania się nie udadzą - może to być np. ostatnia opcja, bądź najpopularniejsza opcja itp.
         return <ThanksMessage/>
     }
   }
@@ -45,6 +45,10 @@ const Survey = () => {
             }
           </div>
           <div className="form-nav">
+            {/* Ciekawy sposób, ale dość ryzykowny - co jak zmieni się ilość kroków? */}
+            {/* Lepiej byłoby zapisać kroki w np. tablicy jako tzw "obiekt konfiguracji" a wariant wybierać na podstawie numeru kroku.*/}
+            {/* Wtedy te wpisy "includes" mogą się zmienić na porównywanie obecnego indeksu kroku z np. długością takiej tablicy i będą niepodatne na zmiany */}
+            {/* (będą działać niezależnie od ilości kroków) */}
             {
                 ![1, 6].includes(currentPage) &&
                 <button className="form-nav-btn btn" onClick={() => setCurrentPage(prev => prev - 1)}>Previous</button>

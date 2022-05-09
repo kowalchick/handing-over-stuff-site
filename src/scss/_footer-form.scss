@@ -5,6 +5,7 @@
   height: 100vh;
   position: relative;
 
+  // Nice!
   &::after {
     content: "";
     position: absolute;
@@ -24,6 +25,7 @@
   flex-direction: column;
   align-items: center;
 
+  // Unikaj "zapinania się" na nazwy elementów z DOM, lepiej używać klas
   textarea {
     resize: none;
     display: block;
@@ -38,7 +40,7 @@
 }
 .contact-title {
   font-weight: normal;
-  font-size: 2.375rem;
+  font-size: 2.375rem; // Kilka razy już to powtórzyłaś - może warto wyrzucić to do pliku ze zmiennymi, np. `fonts.scss`?
   line-height: 3.4rem;
   text-align: center;
   position: relative;
@@ -56,7 +58,7 @@
     display: inline-block;
     width: 50%;
     input {
-      border-bottom: solid 1px $darkgrey;
+      border-bottom: solid 1px $darkgrey; // Kolor użyty "implicite" - lepiej byłoby zaimportować `colors` oddzielnie z settings - przestanie działać, jeśli plik nie będzie zgrupowany z innymi!
       width: 90%;
       padding-top: 20px;
       padding-bottom: 12px;
