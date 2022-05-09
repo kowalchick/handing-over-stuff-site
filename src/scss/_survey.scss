@@ -78,3 +78,108 @@
     background-color: $yellow;
   }
 }
+
+
+@media (max-width: $breakpoint-mobile) {
+  .survey {
+    background: #E8E8E6;
+  }
+  .form-inputs {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .form-inputs {
+    &-input {
+      font-size: 1rem;
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      margin: 0;
+      line-height: 1.875rem;
+    }
+
+    .step-subtitle {
+      font-size: 1.25rem;
+      margin: 0;
+      line-height: 1.875rem;
+    }
+    .step-number {
+      font-size: 0.875rem;
+    }
+    .step-contact {
+      flex-direction: column;
+    }
+    .step-address {
+      width: 100%;
+    }
+    .step-date {
+      width: 100%;
+    }
+    .step-line {
+      font-size: 1rem;
+      margin: 0;
+    }
+    .summary {
+      &-things {
+        font-size: 1rem;
+        line-height: 1.375rem;
+      }
+      &-localization {
+        font-size: 1rem;
+        line-height: 1.375rem;
+        margin-bottom: 20px;
+      }
+      &-contact {
+        flex-direction: column;
+        font-size: 1rem;
+        margin: 0;
+        p {
+          padding: 10px 0;
+        }
+      }
+    }
+    .thanks {
+      font-size: 1.5rem;
+    }
+  }
+  .checkbox-container {
+    margin: 10px 0;
+    font-size: 1.125rem;
+    padding-left: 25px;
+
+    .checkmark {
+      height: 15px;
+      width: 15px;
+    }
+  }
+  .form-nav {
+    display: flex;
+    justify-content: space-between;
+
+    &-btn {
+
+      font-size: 1.25rem;
+      width: 45%;
+      height: auto;
+      padding: 5px 20px;
+      margin: 0;
+    }
+
+  }
+  .select-css {
+    font-size: 1.25rem;
+    padding: 5px;
+    margin: 20px 0;
+  }
+
+  .radio-container {
+    font-size: 1rem;
+    position: relative;
+    padding: 5px 10px;
+    margin: 10px 10px 0 0;
+  }
+}
