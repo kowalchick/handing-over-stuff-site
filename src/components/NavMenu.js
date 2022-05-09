@@ -39,10 +39,10 @@ const NavMenu = () => {
                         </>
                         : <>
                             <NavLink to="/"
-                                    className="nav-user-item"
+                                    className="nav-user-item mobile"
                                     activeClassName="">Home</NavLink>
                             <NavLink to='/login/'
-                                     className="nav-user-item"
+                                     className="nav-user-item mobile"
                                      activeClassName="decoration">Sign in</NavLink>
                             <NavLink to='/register/'
                                      className={`nav-user-item ${!isOffHome && "decoration"}`}
