@@ -19,10 +19,10 @@ export function Variant2() {
 
     return (
         <>
-            <h3 className="step-number">Step 1 of 4</h3>
+            <h3 className="step-number">Step 2 of 4</h3>
             <h2 className="step-title">Select the number of 60l bags in which you packed your things:</h2>
             <div>
-                <label htmlFor="bags">Number of 60l bags</label>
+                <label htmlFor="bags">Number of 60l bags:</label>
                 <select className="select-css" name="bags" value={variant1Data.bags} onChange={handleChange}>
                     <option value="--choose--">--choose--</option>
                     <option value="1">1</option>
