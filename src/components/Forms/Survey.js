@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Variant1} from "./Variants/Variant1";
 import {Variant2} from "./Variants/Variant2";
 import {Variant3} from "./Variants/Variant3";
-import Variant4 from "./Variants/Variant4";
+import {Variant4} from "./Variants/Variant4";
 import SumUp from "./Variants/SumUp";
 import ThanksMessage from "./Variants/ThanksMessage";
 
